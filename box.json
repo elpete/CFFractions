@@ -1,0 +1,33 @@
+{
+    "name": "CFFractions",
+    "version": "1.0.0",
+    "author": "Eric Peterson",
+    "homepage": "https://github.com/elpete/CFFractions",
+    "documentation": "https://github.com/elpete/CFFractions",
+    "repository": {
+        "type": "git",
+        "URL": "https://github.com/elpete/CFFractions"
+    },
+    "bugs": "https://github.com/elpete/CFFractions/issues",
+    "slug": "cffractions",
+    "shortDescription": "A simple CFML whole value implementation of fractions",
+    "description": "A simple CFML whole value implementation of fractions",
+    "type": "modules",
+    "keywords": [
+        "fractions",
+        "math",
+        "whole value"
+    ],
+    "private": false,
+    "devDependencies": {
+        "testbox": "2.3.0+00044"
+    },
+    "installPaths": {
+        "testbox": "testbox"
+    },
+    "ignore": [
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
