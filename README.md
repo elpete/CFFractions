@@ -2,6 +2,9 @@
 
 ## A simple CFML whole value implementation of fractions
 
+[![Master Branch Build Status](https://img.shields.io/travis/elpete/CFFractions/master.svg?style=flat-square)](https://travis-ci.org/elpete/CFFractions)
+
+
 ### Fraction
 
 #### `plus`
