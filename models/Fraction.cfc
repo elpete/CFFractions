@@ -49,7 +49,7 @@ component displayname='Fraction' {
 		return variables.denominator;
 	}
 
-	public boolean function equals(required Fraction that) {
+	public boolean function equalsFraction(required Fraction that) {
 		return this.getNumerator() == that.getNumerator() &&
 			this.getDenominator() == that.getDenominator();
 	}

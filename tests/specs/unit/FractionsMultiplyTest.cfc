@@ -5,42 +5,42 @@ component displayname='FractionsMultiplyTest' extends='testbox.system.BaseSpec' 
 				var f1 = new models.Fraction(0);
 				var f2 = new models.Fraction(0);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(0))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(0))).toBeTrue();
 			});
 
 			it('can multiply non-zero and zero', function() {
 				var f1 = new models.Fraction(3);
 				var f2 = new models.Fraction(0);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(0))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(0))).toBeTrue();
 			});
 
 			it('can multiply zero and non-zero', function() {
 				var f1 = new models.Fraction(0);
 				var f2 = new models.Fraction(5);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(0))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(0))).toBeTrue();
 			});
 
 			it('can multiply two non-zero, non-negative operands', function() {
 				var f1 = new models.Fraction(2);
 				var f2 = new models.Fraction(4);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(8))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(8))).toBeTrue();
 			});
 
 			it('can multiply negative opearnds', function() {
 				var f1 = new models.Fraction(2);
 				var f2 = new models.Fraction(-1);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(-2))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(-2))).toBeTrue();
 			});
 
 			it('can get a negative output', function() {
 				var f1 = new models.Fraction(-3);
 				var f2 = new models.Fraction(1);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(-3))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(-3))).toBeTrue();
 			});
 		});
 
@@ -57,14 +57,14 @@ component displayname='FractionsMultiplyTest' extends='testbox.system.BaseSpec' 
 				var f1 = new models.Fraction(1, 2);
 				var f2 = new models.Fraction(3, 4);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(3, 8))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(3, 8))).toBeTrue();
 			});
 
 			it('reduces the result even when the denominator is the same', function() {
 				var f1 = new models.Fraction(3, 5);
 				var f2 = new models.Fraction(4, 6);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(6, 15))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(6, 15))).toBeTrue();
 			});
 		});
 
@@ -73,14 +73,14 @@ component displayname='FractionsMultiplyTest' extends='testbox.system.BaseSpec' 
 				var f1 = new models.Fraction(-1, 4);
 				var f2 = new models.Fraction(3, 4);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(-3, 16))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(-3, 16))).toBeTrue();
 			});
 
 			it('can reduce a negative result', function() {
 				var f1 = new models.Fraction(-4, 8);
 				var f2 = new models.Fraction(2, 8);
 				var product = f1.times(f2);
-				expect(product.equals(new models.Fraction(-1, 8))).toBeTrue();
+				expect(product.equalsFraction(new models.Fraction(-1, 8))).toBeTrue();
 			});
 		});
 	}

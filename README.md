@@ -13,7 +13,7 @@
 	var f1 = new CFFractions.models.Fraction(1, 5);
 	var f2 = new CFFractions.models.Fraction(2, 3);
 	var sum = f1.plus(f2);
-	writeDump(sum.toString); // 13/15
+	writeDump(sum.toString()); // 13/15
 ```
 
 #### `minus`
@@ -22,7 +22,7 @@
 	var f1 = new CFFractions.models.Fraction(5, 6);
 	var f2 = new CFFractions.models.Fraction(1, 6);
 	var difference = f1.minus(f2);
-	writeDump(difference.toString); // 2/3
+	writeDump(difference.toString()); // 2/3
 ```
 
 #### `times`
@@ -31,7 +31,7 @@
 	var f1 = new CFFractions.models.Fraction(2, 6);
 	var f2 = new CFFractions.models.Fraction(-1, 6);
 	var product = f1.times(f2);
-	writeDump(product.toString); // -1/18
+	writeDump(product.toString()); // -1/18
 ```
 
 #### `divdedBy`
@@ -40,7 +40,16 @@
 	var f1 = new CFFractions.models.Fraction(1, 5);
 	var f2 = new CFFractions.models.Fraction(2, -3);
 	var quotient = f1.divdedBy(f2);
-	writeDump(quotient.toString); // -3/10
+	writeDump(quotient.toString()); // -3/10
+```
+
+#### `equalsFraction`
+
+```cfc
+	var f1 = new CFFractions.models.Fraction(1, 5);
+	var f2 = new CFFractions.models.Fraction(2, 10);
+	var same = f1.equalsFraction(f2);
+	writeDump(same); // true
 ```
 
 ### Factory

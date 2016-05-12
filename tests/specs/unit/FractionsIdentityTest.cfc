@@ -9,12 +9,12 @@ component displayname='FractionsIdentityTest' extends='testbox.system.BaseSpec' 
 
 			it('moves the negative sign to the numerator', function() {
 				var fraction = new models.Fraction(1, -4);
-				expect(fraction.equals(new models.Fraction(-1, 4))).toBeTrue();
+				expect(fraction.equalsFraction(new models.Fraction(-1, 4))).toBeTrue();
 			});
 
 			it('converts both negative numerators and denominators to positive fractions', function() {
 				var fraction = new models.Fraction(-3, -7);
-				expect(fraction.equals(new models.Fraction(3, 7))).toBeTrue();
+				expect(fraction.equalsFraction(new models.Fraction(3, 7))).toBeTrue();
 			});
 
 			it('outputs a nice format with `toString()`', function() {
